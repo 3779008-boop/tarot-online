@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: tarot-online
+    runtime: static
+    buildCommand: node build.mjs
+    staticPublishPath: ./dist
+    autoDeploy: false
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+    envVars:
+      - key: NODE_VERSION
+        value: 22.16.0
+      - key: SITE_URL
+        sync: false
+      - key: CONTACT_EMAIL
+        sync: false
