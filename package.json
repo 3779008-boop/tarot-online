@@ -1,1 +1,13 @@
-{"name":"tarot-online","version":"2.0.0","private":true,"type":"module","scripts":{"build":"node build.mjs","test":"node --test test.mjs"},"engines":{"node":">=22"}}
+{
+  "name": "tarot-online",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test test.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
